@@ -22,7 +22,7 @@ LOCAL_C_INCLUDES += system/core/logwrapper/include
 
 LOCAL_SHARED_LIBRARIES := libc liblog liblogwrap
 
-LOCAL_MODULE := puncture_fs
+LOCAL_MODULE := f2t-puncture_fs
 
 LOCAL_MODULE_TAGS := debug
 
