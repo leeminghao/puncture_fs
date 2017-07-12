@@ -17,15 +17,13 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := puncture_fs.c
-
-LOCAL_C_INCLUDES += system/core/logwrapper/include
-
-LOCAL_SHARED_LIBRARIES := libc liblog liblogwrap
-
-LOCAL_MODULE := f2t-puncture_fs
-
+LOCAL_WHOLE_STATIC_LIBRARIES := \
+    libcutils \
+    liblog \
+    liblogwrap
+LOCAL_MODULE := puncture_fs_static
 LOCAL_MODULE_TAGS := debug
-
 LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
+LOCAL_FORCE_STATIC_EXECUTABLE := true
 
 include $(BUILD_EXECUTABLE)
